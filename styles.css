@@ -1,0 +1,105 @@
+:root {
+  color-scheme: light;
+  --ink: #23352f;
+  --muted: #6f756f;
+  --paper: #fbf7ef;
+  --card: #fffdf8;
+  --line: #e8dfd0;
+  --vermilion: #a8452e;
+  --jade: #264f43;
+  --gold: #ad8750;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(173, 135, 80, 0.12), transparent 34rem),
+    linear-gradient(180deg, #f7f0e4 0%, var(--paper) 42%, #f4ecdf 100%);
+  font: 16px/1.75 -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", sans-serif;
+}
+
+a { color: var(--vermilion); }
+
+.wrap {
+  width: min(760px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 56px 0 72px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 46px;
+  color: var(--jade);
+  font-family: "Songti SC", "STSong", serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.mark {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  color: var(--gold);
+}
+
+h1, h2 {
+  color: var(--ink);
+  font-family: "Songti SC", "STSong", serif;
+  font-weight: 600;
+}
+
+h1 { margin: 0 0 12px; font-size: clamp(32px, 6vw, 46px); line-height: 1.25; }
+h2 { margin: 36px 0 10px; font-size: 21px; }
+p, li { color: #45504b; }
+.meta { margin: 0 0 34px; color: var(--muted); font-size: 13px; }
+
+.card {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 253, 248, 0.88);
+  box-shadow: 0 18px 48px rgba(74, 57, 37, 0.06);
+}
+
+.links { display: grid; gap: 14px; margin-top: 26px; }
+
+.link-card {
+  display: block;
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.link-card strong { display: block; margin-bottom: 3px; color: var(--jade); }
+.link-card span { color: var(--muted); font-size: 14px; }
+
+.notice {
+  margin: 28px 0 0;
+  padding: 16px 18px;
+  border-left: 3px solid var(--gold);
+  border-radius: 0 12px 12px 0;
+  background: rgba(173, 135, 80, 0.08);
+  color: #655f54;
+  font-size: 14px;
+}
+
+footer { margin-top: 42px; color: var(--muted); font-size: 12px; }
+
+@media (max-width: 560px) {
+  .wrap { padding: 32px 0 52px; }
+  .card { padding: 22px 19px; }
+  .brand { margin-bottom: 30px; }
+}
